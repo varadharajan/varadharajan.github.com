@@ -30,6 +30,7 @@ JIT compiled version ran atleast 50x faster than the other. As we are convinced 
 
 Inspecting the JIT compiled assembly code can be done using the flag "XX:+PrintAssembly". We have to turn on the VM diagnostics for this flag to work. As this option is also dependent on the [basic disassembler for hotspot](https://kenai.com/projects/base-hsdis), we need to download it and place it in our LD_LIBRARY_PATH before invoking the JVM with these flags. 
     
+    shell->#Downloading disassembler for MacOS
     shell->sudo wget -O  /usr/lib/hsdis-amd64.dylib \
     https://kenai.com/projects/base-hsdis/downloads/download/gnu-versions/hsdis-amd64.dylib
 
@@ -90,7 +91,6 @@ Many times while debugging performance issues, we focus on a set of methods and 
 
     .... [Trimmed for readability]
 
-As we can see, the generated assembly code also includes details like line number, function name, class etc.. which helps us to understand the code flow.
-
+As we can see, the generated assembly code also includes details like line number, function name, class etc.. which helps us to understand the code flow. Full disassembler output is available [here](https://gist.github.com/varadharajan/eeea5fc53495401e1145)
 
 Reference: [PrintAssembly Manual](https://wikis.oracle.com/display/HotSpotInternals/PrintAssembly)
