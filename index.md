@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Posts
+title: Varadharajan's Journal
 permalink: /
 ---
 {% include JB/setup %}
