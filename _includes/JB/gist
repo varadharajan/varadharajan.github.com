@@ -11,7 +11,7 @@ Usage:
   	</ul>
 -->{% endcomment %}
 
-<div id="gist">
+<div id="gist" class="gist">
 <script src="https://gist.github.com/{{ include.gist_id }}.js{% if include.gist_file %}?file={{ include.gist_file }}{% endif %}"></script>
 <noscript>
 <pre>https://gist.github.com/{{include.gist_id}}.js{% if include.gist_file %}?file={{include.gist_file}}{% endif %}</pre>
