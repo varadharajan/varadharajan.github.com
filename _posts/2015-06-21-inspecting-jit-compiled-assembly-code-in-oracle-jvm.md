@@ -22,7 +22,7 @@ This program does a reduce operation iterating over 100 million times. Running t
     Result : 5000000050000000
     Time taken : 1582.021 ms
 
-JIT compiled version ran atleast 50x faster than the other. As we are convinced of the speedups we got from JIT, we might be wondering about the assembly code it generated during the runtime. We might need to inspect this assembly code for various reasons like
+JIT compiled version ran atleast 50x faster than the other. As we are convinced of the speedups we get from JIT, we might be wondering about the assembly code it generated during the runtime. We might need to inspect this assembly code for various reasons like
 
 * Understanding JIT compiler
 * Diagnosing performance issues
@@ -49,7 +49,7 @@ Inspecting the JIT compiled assembly code can be done using the flag "XX:+PrintA
 
       .... [Trimmed for readability]
 
-Many times while debugging performance issues, we focus on a set of methods and filtering the disassembler output to include assembly code only for those methods can help us analyze effectively. This can be done with the help of "-XX:CompileCommand" flag as shown below.
+Many times while debugging performance issues, we focus on a set of methods and filtering the disassembler output only for these methods can help us analyze effectively. This can be done with the help of "-XX:CompileCommand" flag as shown below.
 
     shell-> java -server -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,*Main.seriousLoop Main
     CompilerOracle: print *Main.seriousLoop
